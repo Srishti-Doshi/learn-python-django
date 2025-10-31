@@ -1,0 +1,43 @@
+<html>
+
+<body onload="msg()">
+    <input type="text" id="t1"><br><br>
+    <input type="text" id="t2"><br><br>
+    <input type="text" id="t3"><br><br>
+    <button onclick="calcy('+')">ADD</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="calcy('-')">SUB</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="calcy('*')">MUL</button><br><br>
+    <button onclick="calcy('/')">DIV&nbsp;</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="calcy('c')">CLR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    <script>
+        function msg() {
+            alert("This is my first js code");
+        }
+        function calcy(op) {
+            var x = parseInt(document.getElementById("t1").value);
+            var y = parseInt(document.getElementById("t2").value);
+            if (op == '+') {
+                document.getElementById("t3").value = (x + y)
+            }
+            else if (op == '-') {
+                document.getElementById("t3").value = (x - y)
+            }
+            else if (op == '*') {
+                document.getElementById("t3").value = (x * y)
+            }
+            else if (op == 'c') {
+                document.getElementById("t1").value = "";
+                document.getElementById("t2").value = "";
+                document.getElementById("t3").value = "";
+
+            }
+            else {
+                document.getElementById("t3").value = (x / y)
+            }
+            document.getElementById("t1").value = "";
+            document.getElementById("t2").value = "";
+        }
+    </script>
+</body>
+
+</html>
