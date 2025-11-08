@@ -1,0 +1,54 @@
+C:\django>django-admin startproject MyShop
+
+C:\django>cd MyShop
+
+C:\django\MyShop>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+November 08, 2025 - 10:50:13
+Django version 5.2.8, using settings 'MyShop.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+
+C:\django\MyShop>cd
+C:\django\MyShop
+
+C:\django\MyShop>cd..
+
+C:\django>django-admin startproject SAIT
+
+C:\django>cd SAIT
+
+C:\django\SAIT>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+November 08, 2025 - 11:12:42
+Django version 5.2.8, using settings 'SAIT.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[08/Nov/2025 11:14:04] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[08/Nov/2025 11:14:04] "GET /favicon.ico HTTP/1.1" 404 2206
+
+C:\django\SAIT>python3 manage.py startapp StudentApp
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+C:\django\SAIT>python manage.py startapp StudentApp
+
+C:\django\SAIT>
