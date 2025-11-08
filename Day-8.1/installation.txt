@@ -1,0 +1,37 @@
+Microsoft Windows [Version 10.0.26200.7019]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\rafor> ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\rafor> cd..
+
+C:\Users>cd..
+
+C:\>mkdir django
+
+C:\>cd django
+
+C:\django>python -m pip install Django
+Collecting Django
+  Downloading django-5.2.8-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref>=3.8.1 (from Django)
+  Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from Django)
+  Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from Django)
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading django-5.2.8-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 354.5 kB/s eta 0:00:00
+Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+Successfully installed Django-5.2.8 asgiref-3.10.0 sqlparse-0.5.3 tzdata-2025.2
+
+[notice] A new release of pip is available: 25.0.1 -> 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\django>django-admin --version
+5.2.8
