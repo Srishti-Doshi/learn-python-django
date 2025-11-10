@@ -1,18 +1,28 @@
 <html>
-    <head>
-        <title>Scripts</title>
-        <script>
-            function f1()
-            {
-                // DOM access
-                var ref = document.getElementById("myh1"); //it returns object form of h1 tag with id myh1
-                alert(ref);
-            }
-        </script>
-    </head>
-    <body>
-        <!-- Click Based -->
-         <button onclick = "f1()">Show Date</button>
-         <h1 id = "myh1"></h1>
-    </body>
+
+<head>
+    <title>Scripts</title>
+    <script>
+        function f1() {
+            // DOM access
+            var ref = document.getElementById("myh1"); //it returns object form of h1 tag with id myh1
+
+            // Create date object
+            var today = new Date();
+
+            // Convert to readable string
+            var dateString = today.toDateString();   // Example: "Mon Nov 10 2025"
+
+            // Write date inside h3
+            ref.innerHTML = dateString;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Click Based -->
+    <button onclick="f1()">Show Date</button>
+    <h1 id="myh1"></h1>
+</body>
+
 </html>
