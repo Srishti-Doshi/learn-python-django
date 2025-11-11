@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ref {
+            height: 20vh;
+        }
+
+        #ref #input {
+            width: 100%;
+            height: 20%;
+            border: none;
+            outline: none;
+            font-size: 20px;
+        }
+
+
+        #mirror {
+            padding: 10px;
+            height: 50vh;
+            background-color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ref">
+        <input id="input" type="text">
+    </div>
+    <div id="mirror"></div>
+
+    <script>
+        let input = document.getElementById("input");
+        let mirror = document.getElementById("mirror");
+
+        input.addEventListener("keyup", () => {
+            let txt = document.getElementById("input").value;
+            mirror.innerHTML = txt;
+        });
+
+        mirror.addEventListener("mouseover", () => {
+            mirror.style.backgroundColor = "black";
+            mirror.style.color = "yellow";
+        });
+
+        mirror.addEventListener("mouseleave", () => {
+          mirror.style.backgroundColor = "red";
+          mirror.style.color = "black";
+          mirror.style.fontWeight = "bold";
+        });
+
+    </script>
+</body>
+
+</html>
