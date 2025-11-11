@@ -1,0 +1,45 @@
+open cmd
+
+c:\>
+
+C:\>django-admin startproject project01
+
+C:\>cd project01
+
+run the project
+C:\project01>python manage.py runserver
+
+
+Open browser
+localhost:8000
+
+
+
+
+project01 -> main app
+
+--inint--.py -> fast , no need to compile 
+
+settings.py -> project's entry 
+
+manage.py -> front controller that checks configuration of python and djasngo
+
+db
+
+
+Difference between get and post method
+
+Get Method :
+1) It is default method
+2) It is used for sending data via url
+3) It is also used for searching data
+4) Get is less secure because it maintain data on URL.
+5) It is faster than post method but not secure and is used for searching
+6) It store upto 2000 character on URL -> Limitation
+7) for fetch data from dhtml control use request.GET.get("name") -for get method
+
+Post Method:
+1) By using post method we can send unlimited data to the server.
+2) It is more secure method because it does not store data on URL.
+3) It is preferable for insert, update and delete.
+4) for fetch data from dhtml control use request.POST.get("name") -for post method
