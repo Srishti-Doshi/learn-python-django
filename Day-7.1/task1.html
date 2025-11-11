@@ -32,8 +32,8 @@
     <script>
         let pw = document.getElementById("pw");
         let label = document.getElementsByTagName("label");
-        
-        pw.addEventListener("click", function () {
+
+        label[0].addEventListener("click", function () {
             if (pw.type === "password") {
                 pw.type = "text";
                 label[0].innerHTML = "Hide Password";
