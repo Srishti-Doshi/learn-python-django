@@ -1,0 +1,105 @@
+<!-- 
+Design a form with given Requirements:
+
+1)All fields required (name, address)
+
+2)Email must be valid.
+
+3)Mobile number must be exactly 10 digits.
+
+4)Username must contain:
+At least 1 capital letter
+At least 1 special character
+
+5)Password must be at least 6 characters.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+
+        #submit {
+            width: 100px;
+            padding: 2px;
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="#">
+        <h1>Submit Form</h1>
+
+        <label for="username">Name</label>
+        <input type="text" name="username" id="username" required><br>
+
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" required><br>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required><br>
+
+        <label for="contactNo">Contact Number</label>
+        <input type="number" name="contactNo" id="contactNo" required><br>
+
+        <label for="pw">Password</label>
+        <input type="password" name="pw" id="pw" required><br>
+
+        <input type="submit" id="submit">
+    </form>
+
+    <script>
+        let submit = document.getElementById("submit");
+
+        let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let usernamePattern = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-={}\[\]|;:'",.<>?]).+$/;
+
+        submit.addEventListener("click", (e) => {
+
+            let email = document.getElementById("email").value;
+            let contactNo = document.getElementById("contactNo").value;
+            let username = document.getElementById("username").value;
+            let pw = document.getElementById("pw").value;
+
+            if (!username.match(usernamePattern)) {
+                alert("Username must contain atleast 1 capital letter and atleast 1 special character");
+                e.preventDefault();
+                return;
+            }
+
+            if (!email.match(emailPattern)) {
+                alert("Invalid email!!");
+                e.preventDefault();
+                return;
+            }
+
+            if (contactNo.length !== 10) {
+                alert("Mobile number must be exactly 10 digits!!");
+                e.preventDefault();
+                return;
+            }
+
+            if (pw.length < 6) {
+                alert("Password must be at least 6 characters");
+                e.preventDefault();
+                return;
+            }
+
+            alert("Form submitted successfully✅")
+        });
+
+    </script>
+</body>
+
+</html>
