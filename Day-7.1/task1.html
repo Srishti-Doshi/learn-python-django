@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Hide Password</title>
+    <style>
+        input {
+            border: 2px solid black;
+            margin: 5px;
+            padding: 10px;
+            color: white;
+            font-size: large;
+            font-weight: bold;
+            background-color: black;
+        }
+
+        label {
+            font-size: large;
+            font-weight: bold;
+            margin: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="password" name="pw" id="pw">
+    <label for="pw">Show password</label>
+
+    <script>
+        let pw = document.getElementById("pw");
+        let label = document.getElementsByTagName("label");
+        
+        pw.addEventListener("click", function () {
+            if (pw.type === "password") {
+                pw.type = "text";
+                label[0].innerHTML = "Hide Password";
+            }
+            else {
+                pw.type = "password";
+                label[0].innerHTML = "Show Password";
+            }
+        });
+    </script>
+</body>
+
+</html>
